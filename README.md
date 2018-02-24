@@ -1,7 +1,7 @@
 # vesselness3d and vesselnessv3d
 3d multiscale vessel enhancement filtering<br/>
 
-| INPUT  | OUTPUT |
+| INPUT | OUTPUT |
 | ------------- | ------------- |
 | <img src="https://github.com/BoguslawObara/vesselness3d/blob/master/im/neuron.png" width="250">  | <img src="https://github.com/BoguslawObara/vesselness3d/blob/master/im/neuron_v.png" width="250"> |
 
