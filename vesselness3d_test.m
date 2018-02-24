@@ -18,11 +18,11 @@ beta = 5;
 c = 15;
 wb = true;
 
-[v,vmax] = vesselness3d(im,sigma,gamma,alpha,beta,c,wb);
+[imv,v] = vesselness3d(im,sigma,gamma,alpha,beta,c,wb);
 
 %% plot
 figure; imagesc(max(im,[],3)); colormap gray; 
 set(gca,'ytick',[]); set(gca,'xtick',[]); axis image; axis tight;
 
-figure; imagesc(max(vmax,[],3)); colormap gray; 
+figure; imagesc(max(imv,[],3)); colormap gray; 
 set(gca,'ytick',[]); set(gca,'xtick',[]); axis image; axis tight;

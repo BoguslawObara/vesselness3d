@@ -1,4 +1,4 @@
-function [v,vmax,vidx,vx,vy,vz,l1,l2,l3] = ...
+function [imv,v,vidx,vx,vy,vz,l1,l2,l3] = ...
     vesselnessv3d(im,sigma,gamma,alpha,beta,c,wb)
 %%  vesselnessv3d - multiscale vessel enhancement filtering with vectors
 %   
@@ -17,7 +17,7 @@ function [v,vmax,vidx,vx,vy,vz,l1,l2,l3] = ...
 %       wb      - detect black or white regions.
 %
 %   OUTPUT:
-%       vmax    - vesselness,
+%       imv     - vesselness,
 %       v       - cell of all vesselness images for each sigma
 %
 %   AUTHOR:
@@ -100,7 +100,7 @@ end
 
 %% calculate maximum image over the scales
 if length(sigma)>1
-    [vmax,vidx] = max(v,[],4);
+    [imv,vidx] = max(v,[],4);
     for i=1:m
         for j=1:n
             for k=1:o
@@ -111,8 +111,8 @@ if length(sigma)>1
         end
     end
 else
-    vmax = v;
-    vidx = ones(size(vmax));
+    imv = v;
+    vidx = ones(size(imv));
     vx = vxt(:,:,:,1);
     vy = vyt(:,:,:,1);
     vz = vzt(:,:,:,1);
