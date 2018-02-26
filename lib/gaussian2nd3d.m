@@ -1,4 +1,7 @@
-function [gxx,gyy,gzz,gxy,gxz,gyz] = gaussian2nd3d(s) 
+function [gxx,gyy,gzz,gxy,gxz,gyz] = gaussian2nd3d(s)
+%% setup
+if length(s)==1; s = s*ones(1,3); end
+
 %% grid coordinates
 k = 3;
 [x,y,z] = ndgrid(-round(k*s(1)):round(k*s(1)),-round(k*s(2)):round(k*s(2)),-round(k*s(3)):round(k*s(3)));
